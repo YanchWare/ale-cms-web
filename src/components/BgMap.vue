@@ -39,12 +39,10 @@ export default {
     },
 
     initMap () {
-      let myMap = Leaflet.map('mapid').setView([37.39793, 14.658872], 8)
-      Leaflet.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
+      let myMap = Leaflet.map('mapid', { zoomControl: false }).setView([37.7544, 14.995895], 12)
+      Leaflet.tileLayer('https://api.mapbox.com/styles/v1/amenuor/ciyafmipg007w2rod0g4wb734/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW1lbnVvciIsImEiOiJjaXlhZmxzeGkwMDR0MndvZXp3OWgybDI5In0.FVcU8LAD7RwwawnYR4Av8w', {
         maxZoom: 18,
-        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-          '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-          'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+        attribution: '',
         id: 'mapbox.streets'
       }).addTo(myMap)
     }
