@@ -1,10 +1,10 @@
 <template>
   <div id="side-nav" class="valign-wrapper">
     <div class="valign">
-      <a class="btn-floating btn-large waves-effect waves-light"><i class="large fa fa-search" aria-hidden="true"></i></a>
-      <a class="btn-floating btn-large waves-effect waves-light"><i class="large fa fa-sun-o" aria-hidden="true"></i></a>
-      <a class="btn-floating btn-large waves-effect waves-light"><i class="large fa fa-question" aria-hidden="true"></i></a>
-      <a class="btn-floating btn-large waves-effect waves-light"><i class="large fa fa-envelope-o" aria-hidden="true"></i></a>
+      <router-link to="/" class="btn-floating btn-large waves-effect waves-light"><i class="large fa fa-home" aria-hidden="true"></i></router-link>
+      <router-link to="/portfolio" class="btn-floating btn-large waves-effect waves-light"><i class="large fa fa-sun-o" aria-hidden="true"></i></router-link>
+      <router-link to="/about" class="btn-floating btn-large waves-effect waves-light"><i class="large fa fa-question" aria-hidden="true"></i></router-link>
+      <router-link to="/contacts" class="btn-floating btn-large waves-effect waves-light"><i class="large fa fa-envelope-o" aria-hidden="true"></i></router-link>
     </div>
   </div>
 </template>
