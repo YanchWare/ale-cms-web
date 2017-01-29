@@ -18,6 +18,7 @@ const router = new VueRouter({
   routes: [
     { path: '/', name: 'frontpage', component: Frontpage },
     { path: '/about', name: 'about', component: Article },
+    { path: '/locations/:locationId', name: 'locations', component: Article },
     { path: '/portfolio', name: 'portfolio', component: Portfolio },
     { path: '/team/:userId', name: 'user', component: User },
     { path: '/contacts', name: 'contacts', component: Contacts },

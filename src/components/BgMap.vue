@@ -2,7 +2,7 @@
   <div>
     <div class="badge-holder">
       <div class="badge">
-        <h1>Alessandro&nbsp;&nbsp;&nbsp;&nbsp;Guzzetta</h1>
+        <h1>Alessandro Guzzetta</h1>
         <img src="/static/assets/vulcano.png" />
       </div>
     </div>
@@ -19,7 +19,9 @@ export default {
   components: {},
 
   data () {
-    return {}
+    return {
+      markers: null
+    }
   },
 
   head: function () {},
@@ -44,16 +46,35 @@ export default {
   methods: {
 
     fetchData () {
+      this.markers = [
+        {
+          location: [37.7341779, 15.0318055],
+          locationId: 'valleDelBove',
+          icon: {
+            iconUrl: '/static/assets/valleDelBove.png',
+            shadowUrl: '',
+            iconSize: [50, 50],
+            shadowSize: [0, 0]
+          }
+        }
+      ]
     },
 
     initMap () {
       window.$('h1').lettering()
-      let myMap = Leaflet.map('mapid', { zoomControl: false }).setView([37.7544, 14.995895], 12)
+      let myMap = Leaflet.map('mapid', { zoomControl: false }).setView([37.7220031, 15.1464744], 11)
       Leaflet.tileLayer('https://api.mapbox.com/styles/v1/amenuor/ciyafmipg007w2rod0g4wb734/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW1lbnVvciIsImEiOiJjaXlhZmxzeGkwMDR0MndvZXp3OWgybDI5In0.FVcU8LAD7RwwawnYR4Av8w', {
         maxZoom: 18,
         attribution: '',
         id: 'mapbox.streets'
       }).addTo(myMap)
+      this.markers.map((marker) => {
+        let markerIcon = Leaflet.icon(marker.icon)
+        let markerOnMap = Leaflet.marker(marker.location, {icon: markerIcon}).addTo(myMap)
+        markerOnMap.on('click', () => {
+          this.$router.push({ name: 'locations', params: { locationId: marker.locationId } })
+        })
+      })
     }
 
   }
@@ -75,24 +96,34 @@ export default {
 .badge-holder{
   position: absolute;
   background-color: rgba(51, 51, 51, 0.7);
-  height: 85px;
+  height: 145px;
   border-radius: 20%;
-  margin: 10px;
+  margin-top: 10px;
+  left: -70px;
+  transform: rotate(90deg);
 }
+
+/* Markers */
+.leaflet-marker-icon{
+  border-radius: 50%;
+}
+
+
+/* Logo */
 
 .badge {
   position: relative;
-  top: -85px;
-  width: 200px;
+  top: -75px;
+  width: 170px;
   border-radius: 50%;
   transform: rotate(-56deg);
   color: #FF6347;
 }
 
 .badge img{
-  width: 70px;
-  transform: rotate(56deg);
-  margin: 40px 0 0 40px;
+  width: 60px;
+  transform: rotate(-34deg);
+  margin: 36px 0 0 10px;
   text-shadow: 1px 1px 2px #FF6347; 
 }
 
