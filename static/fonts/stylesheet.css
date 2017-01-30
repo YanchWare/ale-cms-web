@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'Tipper';
+	src: url('Tipper.eot');
+	src: url('Tipper.eot?#iefix') format('embedded-opentype'),
+		url('Tipper.woff2') format('woff2'),
+		url('Tipper.woff') format('woff'),
+		url('Tipper.ttf') format('truetype'),
+		url('Tipper.svg#Tipper') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

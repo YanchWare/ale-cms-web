@@ -42,16 +42,24 @@ export default {
 #toggle{
   height: 100vh;
   width: 40vw;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   display: none;
   position: absolute;
   right: 70px;
 }
 #close-toggle{
-  float: right;
+  position: absolute;
   font-size: 2em;
+  line-height: 1em;
   cursor: pointer;
-  margin-right: 10px;
+  margin-left: 10px;
   color: #FF6347;
+  background-color: #fff; 
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Tipper', sans-serif;
+}
+body{
+  font-family: 'Quicksand', sans-serif;
 }
 </style>
