@@ -101,7 +101,7 @@ export default {
     },
 
     initMap () {
-      window.$('h1').lettering()
+      window.$('.badge h1').lettering()
       let myMap = Leaflet.map('mapid', { zoomControl: false }).setView([37.7220031, 15.1464744], 11)
       Leaflet.tileLayer('https://api.mapbox.com/styles/v1/amenuor/ciyafmipg007w2rod0g4wb734/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW1lbnVvciIsImEiOiJjaXlhZmxzeGkwMDR0MndvZXp3OWgybDI5In0.FVcU8LAD7RwwawnYR4Av8w', {
         maxZoom: 18,
