@@ -1,6 +1,7 @@
 <template>
     <div id="contacts">
-        Contacts
+        <h3>Contatti</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed semper nisl, eu tempor massa. Curabitur cursus arcu sem, nec maximus justo varius ut. Integer posuere sapien eu euismod mollis. Donec mi nisi, finibus non feugiat nec, tristique sit amet dui. Vivamus dignissim sit amet neque eget eleifend. Donec semper ultricies odio, consectetur pellentesque elit laoreet sit amet. Phasellus venenatis ornare augue, quis commodo ligula rhoncus rutrum. Vivamus ultrices quam felis, nec facilisis libero facilisis ac.
     </div>
 </template>
 
@@ -25,4 +26,12 @@ export default {
 </script>
 
 <style scoped>
+#contacts{
+  margin: 10px;
+}
+
+#contacts h3{
+  margin-top: 50px;
+}
+
 </style>

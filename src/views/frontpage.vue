@@ -8,6 +8,7 @@
         <a class="carousel-item" href="#four!"><img src="http://galenf.com/Sicily/etna015.jpg"></a>
         <a class="carousel-item" href="#five!"><img src="http://www.earthlyissues.com/images/etna.jpg"></a>
       </div>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed semper nisl, eu tempor massa. Curabitur cursus arcu sem, nec maximus justo varius ut. Integer posuere sapien eu euismod mollis. Donec mi nisi, finibus non feugiat nec, tristique sit amet dui. Vivamus dignissim sit amet neque eget eleifend. Donec semper ultricies odio, consectetur pellentesque elit laoreet sit amet. Phasellus venenatis ornare augue, quis commodo ligula rhoncus rutrum. Vivamus ultrices quam felis, nec facilisis libero facilisis ac.
     </div>
 </template>
 
@@ -39,6 +40,10 @@ export default {
 #frontpage h3{
   margin-top: 50px;
   margin-bottom: -50px;
+}
+
+#frontpage{
+  margin: 10px;
 }
 
 </style>
